@@ -1,6 +1,15 @@
 import React from "react";
 
 class Signup extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+        username: '',
+        password: '',
+        repassword: ''
+        }
+        }
+
 
   render(){
       return(
