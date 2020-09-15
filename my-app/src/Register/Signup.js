@@ -42,13 +42,13 @@ class Signup extends React.Component {
 
     if (!input["username"]) {
       isValid = false;
-      errors["username"] = <p>Please enter your username</p>
+      errors["username"] = <p className="formvalidation">Please enter your username</p>
     }
 
 
     if (!input["password"]) {
       isValid = false;
-      errors["password"] = <p>Please enter your password</p>
+      errors["password"] = <p className="formvalidation">Please enter your password</p>
     }
   
     
@@ -56,14 +56,14 @@ class Signup extends React.Component {
 
     if (!input["confirm_password"]) {
       isValid = false;
-      errors["confirm_password"] = <p>Please enter your confirm password</p>
+      errors["confirm_password"] = <p className="formvalidation">Please enter your confirm password</p>
     }
 
     if (typeof input["password"] !== "undefined" && typeof input["confirm_password"] !== "undefined") {
         
       if (input["password"] != input["confirm_password"]) {
         isValid = false;
-        errors["password"] = <p>Passwords don't match</p>
+        errors["password"] = <p className="formvalidation">Passwords don't match</p>
       }
     } 
 
