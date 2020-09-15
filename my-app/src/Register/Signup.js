@@ -44,24 +44,29 @@ class Signup extends React.Component {
       isValid = false;
       errors["username"] = <p className="formvalidation">Please enter your username</p>
     }
-
+   if(typeof input["password"] !== "undefined"){
+     if(input["password"].length < 8){
+      isValid = false;
+      errors["password"] = <p className="formvalidation">Password must be at least 8 characters long! </p>
+     }
+   }
 
     if (!input["password"]) {
       isValid = false;
       errors["password"] = <p className="formvalidation">Please enter your password</p>
     }
   
-
     if (!input["confirm_password"]) {
       isValid = false;
       errors["confirm_password"] = <p className="formvalidation">Please enter your confirm password</p>
     }
+    
 
     if (typeof input["password"] !== "undefined" && typeof input["confirm_password"] !== "undefined") {
         
       if (input["password"] != input["confirm_password"]) {
         isValid = false;
-        errors["password"] = <p className="formvalidation">Passwords don't match</p>
+        errors["conform_password"] = <p className="formvalidation">Password don't match</p>
       }
     } 
 
