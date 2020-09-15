@@ -51,8 +51,6 @@ class Signup extends React.Component {
       errors["password"] = <p className="formvalidation">Please enter your password</p>
     }
   
-    
-   
 
     if (!input["confirm_password"]) {
       isValid = false;
@@ -107,7 +105,7 @@ class Signup extends React.Component {
           </div>
 
           <div class="form-group">
-            <label for="password">Confirm Password:</label>
+            <label for="password">Re-Password:</label>
             <input
               type="password"
               name="confirm_password"
@@ -123,7 +121,7 @@ class Signup extends React.Component {
             </div>
           </div>
 
-          <input type="submit" value="Submit" class="btn btn-success" />
+          <button type="submit" value="Submit" class="btn btn-success">Sumit</button>
         </form>
       </div>
     );
