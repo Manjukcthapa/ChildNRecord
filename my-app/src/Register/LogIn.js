@@ -41,7 +41,7 @@ class LogIn extends React.Component {
     if (!input["username"]) {
       isValid = false;
       errors["username"] = (
-        <p className="formvalidation">Please enter your username</p>
+        <p className="formvalidation">Please enter your Valid Username</p>
       );
     }
     if (typeof input["password"] !== "undefined") {
@@ -49,7 +49,7 @@ class LogIn extends React.Component {
         isValid = false;
         errors["password"] = (
           <p className="formvalidation">
-            Password must be at least 8 characters long!{" "}
+            Password must be at least 8 characters long
           </p>
         );
       }
@@ -58,7 +58,7 @@ class LogIn extends React.Component {
     if (!input["password"]) {
       isValid = false;
       errors["password"] = (
-        <p className="formvalidation">Please enter your password</p>
+        <p className="formvalidation">Please enter your Valid Password</p>
       );
     }
 
