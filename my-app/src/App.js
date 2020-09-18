@@ -1,15 +1,18 @@
 import React from 'react';
 import './App.css';
-import Signup from "./Register/Signup"
+import SignUp from "./Register/Signup"
 import LogIn from "./Register/LogIn"
+import { Route, Switch } from 'react-router-dom'
 
 
 
 function App() {
   return (
     <div className="App">
-     <Signup/>
-     <LogIn/>
+      <Switch>
+      <Route exact path="/signup" component={SignUp} />
+      <Route  path="/LogIn" component={LogIn} />
+     </Switch>
     </div>
   );
 }
